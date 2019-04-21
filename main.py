@@ -29,4 +29,6 @@ def about():
     
 #This conditional is true if we run the script directly
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.debug = True
+    app.run(host= '0.0.0.0', port=5000)
