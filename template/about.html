@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>About Flask</title>
+    {% if title %}
+        <title>VOICE AGENDA - {{title}} </title>
+    {% else %}
+        <title>VOICE AGENDA </title>
+    {% endif %}
 </head>
 <body>
     {% extends "template.html" %}
     {% block content %}
-    <h1> About Flask </h1>
+    <h1> ABOUT VOICE AGENDA </h1>
     <p> Flask is a micro web framework written in Python.</p>
     <p>
         Applications that use the Flask framework include Pinterest,

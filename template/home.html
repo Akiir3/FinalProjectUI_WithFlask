@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>Voice Agenda</title>
+    {% if title %}
+    	<title>VOICE AGENDA - {{title}} </title>
+    {% else %}
+    	<title>VOICE AGENDA </title>
+    {% endif %}
 </head>
 <body>
-    {% extends "template.html" %}
-    {% block content %}
-    <h1> VOICE AGENDA </h1>
-    <p> Flask is Fun </p>
+<!--     {% extends "main.py" %} -->    
+ 	{% for DayAct in DayAct %}
+    <h1> TODAY {{DayAct.user}}</h1>
+    <p> {{DayAct.8am}} </p>
+    <p> {{DayAct.10pm}} </p>
 
-    {% endblock %}
+    {% endfor %}
 </body>
 </html>
