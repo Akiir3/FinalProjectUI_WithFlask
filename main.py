@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 #decorator that allows us to write the function to return the website
 @app.route("/")
+@app.route("/home")
 def home():
     return render_template("home.html")
     
@@ -12,5 +13,6 @@ def home():
 def about():
     return render_template("about.html")
     
+#This conditional is true if we run the script directly
 if __name__ == "__main__":
     app.run(debug=True)
